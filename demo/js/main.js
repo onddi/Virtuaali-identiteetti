@@ -1,4 +1,4 @@
-var scene, camera, renderer;
+var scene, camera, renderer, controls;
 
 var WIDTH  = window.innerWidth;
 var HEIGHT = window.innerHeight;
@@ -12,14 +12,36 @@ function init() {
     initCamera();
     initLights();
     initRenderer();
+    initControls();
+
+    //
+
+    window.addEventListener( 'resize', onWindowResize, false );     
 
     document.body.appendChild(renderer.domElement);
 }
+
+function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+}   
 
 function initCamera() {
     camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
     camera.position.set(0, 0, 5);
     camera.lookAt(scene.position);
+}
+
+function initControls() {
+    controls = new THREE.OrbitControls( camera, renderer.domElement );
+    //controls.addEventListener( 'change', render ); // add this only if there is no animation loop (requestAnimationFrame)
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.enableZoom = false;
 }
 
 
