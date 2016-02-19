@@ -46,7 +46,7 @@ function initControls() {
 
 
 function initRenderer() {
-    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: 1});
     renderer.setSize(WIDTH, HEIGHT);
 }
 
@@ -58,15 +58,16 @@ function initLights() {
 var mesh = null;
 function initMesh() {
     var loader = new THREE.JSONLoader();
-    loader.load('./otso.json', function(geometry, materials) {
-        //mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
-        //mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
-        //mesh.translation = THREE.GeometryUtils.center(geometry);
-        //scene.add(mesh);
+    loader.load('./ossi.json', function(geometry, materials) {
+        /*console.log(materials)
+        mesh = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(materials));
+        mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
+        mesh.translation = THREE.GeometryUtils.center(geometry);
+        scene.add(mesh);*/
 
         /// material
         var material = new THREE.MeshPhongMaterial( {
-            color: 0xffffff, 
+            color: 0x000000, 
             shading: THREE.FlatShading,
             polygonOffset: true,
             polygonOffsetFactor: 1, // positive value pushes polygon further away
@@ -76,14 +77,15 @@ function initMesh() {
         
         // mesh
         mesh = new THREE.Mesh( geometry, material );
+        mesh.scale.x = mesh.scale.y = mesh.scale.z = 1;
         mesh.translation = geometry.center(geometry);
         scene.add( mesh );
 
         // wireframe
-        //var helper = new THREE.EdgesHelper( mesh, 0xffffff );
-        //var helper = new THREE.WireframeHelper( mesh, 0xffffff ); // alternate
-        //helper.material.linewidth = 2;
-        //scene.add( helper );
+        /*var helper = new THREE.EdgesHelper( mesh, 0xffffff );
+        var helper = new THREE.WireframeHelper( mesh, 0xffffff ); // alternate
+        helper.material.linewidth = 1;
+        scene.add( helper );*/
 
     });
 }
