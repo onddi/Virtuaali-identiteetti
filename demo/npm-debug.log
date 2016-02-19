@@ -1,0 +1,281 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'http-server' ]
+2 info using npm@1.2.14
+3 info using node@v0.10.0
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'http-server', null ]
+7 verbose cache add name=undefined spec="http-server" args=["http-server",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'http-server',
+8 verbose parsed url   path: 'http-server',
+8 verbose parsed url   href: 'http-server' }
+9 silly lockFile ed608307-http-server http-server
+10 verbose lock http-server /Users/piahenrietta/.npm/ed608307-http-server.lock
+11 silly lockFile ed608307-http-server http-server
+12 silly lockFile ed608307-http-server http-server
+13 verbose addNamed [ 'http-server', '' ]
+14 verbose addNamed [ null, '' ]
+15 silly lockFile 550353c6-http-server http-server@
+16 verbose lock http-server@ /Users/piahenrietta/.npm/550353c6-http-server.lock
+17 silly addNameRange { name: 'http-server', range: '', hasData: false }
+18 verbose url raw http-server
+19 verbose url resolving [ 'https://registry.npmjs.org/', './http-server' ]
+20 verbose url resolved https://registry.npmjs.org/http-server
+21 info trying registry request attempt 1 at 14:32:32
+22 http GET https://registry.npmjs.org/http-server
+23 http 200 https://registry.npmjs.org/http-server
+24 silly registry.get cb [ 200,
+24 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+24 silly registry.get     etag: '"7UE6YPTK22ZIBQ6AH2LHB6GPS"',
+24 silly registry.get     'content-type': 'application/json',
+24 silly registry.get     'cache-control': 'max-age=300',
+24 silly registry.get     'content-length': '57987',
+24 silly registry.get     'accept-ranges': 'bytes',
+24 silly registry.get     date: 'Fri, 19 Feb 2016 12:32:33 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     age: '106',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-fra1244-FRA',
+24 silly registry.get     'x-cache': 'HIT',
+24 silly registry.get     'x-cache-hits': '1',
+24 silly registry.get     'x-timer': 'S1455885153.042417,VS0,VE0',
+24 silly registry.get     vary: 'Accept' } ]
+25 silly addNameRange number 2 { name: 'http-server', range: '', hasData: true }
+26 silly addNameRange versions [ 'http-server',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '0.2.4',
+26 silly addNameRange     '0.2.5',
+26 silly addNameRange     '0.2.6',
+26 silly addNameRange     '0.2.9',
+26 silly addNameRange     '0.3.0',
+26 silly addNameRange     '0.4.0',
+26 silly addNameRange     '0.4.1',
+26 silly addNameRange     '0.5.0',
+26 silly addNameRange     '0.5.1',
+26 silly addNameRange     '0.5.2',
+26 silly addNameRange     '0.5.3',
+26 silly addNameRange     '0.5.5',
+26 silly addNameRange     '0.6.0',
+26 silly addNameRange     '0.6.1',
+26 silly addNameRange     '0.7.0',
+26 silly addNameRange     '0.7.1',
+26 silly addNameRange     '0.7.2',
+26 silly addNameRange     '0.7.3',
+26 silly addNameRange     '0.7.4',
+26 silly addNameRange     '0.7.5',
+26 silly addNameRange     '0.8.0',
+26 silly addNameRange     '0.8.1',
+26 silly addNameRange     '0.8.2',
+26 silly addNameRange     '0.8.3',
+26 silly addNameRange     '0.8.4',
+26 silly addNameRange     '0.8.5',
+26 silly addNameRange     '0.9.0' ] ]
+27 verbose addNamed [ 'http-server', '0.9.0' ]
+28 verbose addNamed [ '0.9.0', '0.9.0' ]
+29 silly lockFile ccc85818-http-server-0-9-0 http-server@0.9.0
+30 verbose lock http-server@0.9.0 /Users/piahenrietta/.npm/ccc85818-http-server-0-9-0.lock
+31 silly lockFile 8fc931e5-ttp-server-http-server-0-9-0-tgz https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+32 verbose lock https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz /Users/piahenrietta/.npm/8fc931e5-ttp-server-http-server-0-9-0-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz',
+33 verbose addRemoteTarball   '8f1b06bdc733618d4dc42831c7ba1aff4e06001a' ]
+34 info retry fetch attempt 1 at 14:32:33
+35 verbose fetch to= /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+36 http GET https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+37 http 200 https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+38 silly shasum updated bytes 65536
+39 silly shasum updated bytes 65536
+40 silly shasum updated bytes 65536
+41 silly shasum updated bytes 65536
+42 silly shasum updated bytes 65536
+43 silly shasum updated bytes 65536
+44 silly shasum updated bytes 65536
+45 silly shasum updated bytes 17353
+46 info shasum 8f1b06bdc733618d4dc42831c7ba1aff4e06001a
+46 info shasum /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+47 verbose tar unpack /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+48 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+49 verbose lock /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package /Users/piahenrietta/.npm/1b166bf0-53183-0-1431831878144294-package.lock
+50 silly lockFile 99a610b0-53183-0-1431831878144294-tmp-tgz /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+51 verbose lock /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz /Users/piahenrietta/.npm/99a610b0-53183-0-1431831878144294-tmp-tgz.lock
+52 silly gunzTarPerm modes [ '755', '644' ]
+53 silly gunzTarPerm extractEntry package.json
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm extractEntry README.md
+56 silly gunzTarPerm extractEntry LICENSE
+57 silly gunzTarPerm extractEntry lib/http-server.js
+58 silly gunzTarPerm extractEntry bin/http-server
+59 silly gunzTarPerm extractEntry screenshots/directory.png
+60 silly gunzTarPerm extractEntry screenshots/public.png
+61 silly gunzTarPerm extractEntry screenshots/start.png
+62 silly gunzTarPerm extractEntry .travis.yml
+63 silly gunzTarPerm extractEntry public/404.html
+64 silly gunzTarPerm extractEntry public/img/turtle.png
+65 silly gunzTarPerm extractEntry public/index.html
+66 silly gunzTarPerm extractEntry test/http-server-test.js
+67 silly gunzTarPerm extractEntry test/fixtures/root/canYouSeeMe
+68 silly gunzTarPerm extractEntry test/fixtures/root/file
+69 verbose read json /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package/package.json
+70 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+71 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+72 silly lockFile 99a610b0-53183-0-1431831878144294-tmp-tgz /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+73 silly lockFile 99a610b0-53183-0-1431831878144294-tmp-tgz /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/tmp.tgz
+74 verbose from cache /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package/package.json
+75 verbose tar pack [ '/Users/piahenrietta/.npm/http-server/0.9.0/package.tgz',
+75 verbose tar pack   '/var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package' ]
+76 verbose tarball /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+77 verbose folder /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+78 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+79 verbose lock /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package /Users/piahenrietta/.npm/1b166bf0-53183-0-1431831878144294-package.lock
+80 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+81 verbose lock /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz /Users/piahenrietta/.npm/5719893b-pm-http-server-0-9-0-package-tgz.lock
+82 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+83 silly lockFile 1b166bf0-53183-0-1431831878144294-package /var/folders/4m/c2m3j3590112908vlk4d4_2m0000gr/T/npm-1391/1455885153183-0.1431831878144294/package
+84 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+85 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+86 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+87 verbose lock /Users/piahenrietta/.npm/http-server/0.9.0/package /Users/piahenrietta/.npm/062a71e8-ta-npm-http-server-0-9-0-package.lock
+88 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+89 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+90 verbose tar unpack /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+91 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+92 verbose lock /Users/piahenrietta/.npm/http-server/0.9.0/package /Users/piahenrietta/.npm/062a71e8-ta-npm-http-server-0-9-0-package.lock
+93 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+94 verbose lock /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz /Users/piahenrietta/.npm/5719893b-pm-http-server-0-9-0-package-tgz.lock
+95 silly gunzTarPerm modes [ '755', '644' ]
+96 silly gunzTarPerm extractEntry package.json
+97 silly gunzTarPerm extractEntry .npmignore
+98 silly gunzTarPerm extractEntry README.md
+99 silly gunzTarPerm extractEntry LICENSE
+100 silly gunzTarPerm extractEntry .travis.yml
+101 silly gunzTarPerm extractEntry bin/http-server
+102 silly gunzTarPerm extractEntry lib/http-server.js
+103 silly gunzTarPerm extractEntry public/404.html
+104 silly gunzTarPerm extractEntry public/img/turtle.png
+105 silly gunzTarPerm extractEntry public/index.html
+106 silly gunzTarPerm extractEntry screenshots/directory.png
+107 silly gunzTarPerm extractEntry screenshots/public.png
+108 silly gunzTarPerm extractEntry screenshots/start.png
+109 silly gunzTarPerm extractEntry test/http-server-test.js
+110 silly gunzTarPerm extractEntry test/fixtures/root/canYouSeeMe
+111 silly gunzTarPerm extractEntry test/fixtures/root/file
+112 verbose read json /Users/piahenrietta/.npm/http-server/0.9.0/package/package.json
+113 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+114 silly lockFile 062a71e8-ta-npm-http-server-0-9-0-package /Users/piahenrietta/.npm/http-server/0.9.0/package
+115 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+116 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+117 silly shasum updated bytes 65536
+118 silly shasum updated bytes 65536
+119 silly shasum updated bytes 65536
+120 silly shasum updated bytes 65536
+121 silly shasum updated bytes 65536
+122 silly shasum updated bytes 65536
+123 silly shasum updated bytes 65536
+124 silly shasum updated bytes 12795
+125 info shasum 55aaab912ab09132f78c0a03f7b2932052c4371f
+125 info shasum /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+126 verbose from cache /Users/piahenrietta/.npm/http-server/0.9.0/package/package.json
+127 verbose chmod /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz 644
+128 verbose chown /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz [ 504, 20 ]
+129 silly lockFile 8fc931e5-ttp-server-http-server-0-9-0-tgz https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+130 silly lockFile 8fc931e5-ttp-server-http-server-0-9-0-tgz https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz
+131 silly lockFile ccc85818-http-server-0-9-0 http-server@0.9.0
+132 silly lockFile ccc85818-http-server-0-9-0 http-server@0.9.0
+133 silly lockFile 550353c6-http-server http-server@
+134 silly lockFile 550353c6-http-server http-server@
+135 silly resolved [ { name: 'http-server',
+135 silly resolved     version: '0.9.0',
+135 silly resolved     description: 'A simple zero-configuration command-line http server',
+135 silly resolved     main: './lib/http-server',
+135 silly resolved     repository:
+135 silly resolved      { type: 'git',
+135 silly resolved        url: 'git://github.com/indexzero/http-server.git' },
+135 silly resolved     keywords: [ 'cli', 'command' ],
+135 silly resolved     scripts:
+135 silly resolved      { start: 'node ./bin/http-server',
+135 silly resolved        pretest: 'common bin/http-server lib/ test',
+135 silly resolved        test: 'vows --spec --isolate' },
+135 silly resolved     contributors:
+135 silly resolved      [ [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object],
+135 silly resolved        [Object] ],
+135 silly resolved     dependencies:
+135 silly resolved      { colors: '1.0.3',
+135 silly resolved        corser: '~2.0.0',
+135 silly resolved        ecstatic: '^1.4.0',
+135 silly resolved        'http-proxy': '^1.8.1',
+135 silly resolved        opener: '~1.4.0',
+135 silly resolved        optimist: '0.6.x',
+135 silly resolved        portfinder: '0.4.x',
+135 silly resolved        union: '~0.4.3' },
+135 silly resolved     devDependencies: { 'common-style': '^3.0.0', request: '2.49.x', vows: '0.7.x' },
+135 silly resolved     bugs: { url: 'https://github.com/nodeapps/http-server/issues' },
+135 silly resolved     license: 'MIT',
+135 silly resolved     preferGlobal: 'true',
+135 silly resolved     bin: { 'http-server': './bin/http-server', hs: './bin/http-server' },
+135 silly resolved     readme: '# http-server: a command-line http server\n\n`http-server` is a simple, zero-configuration command-line http server.  It is powerful enough for production usage, but it\'s simple and hackable enough to be used for testing, local development, and learning.\n\n![](https://github.com/nodeapps/http-server/raw/master/screenshots/public.png)\n\n# Installing globally:\n\nInstallation via `npm`:\n\n     npm install http-server -g\n\nThis will install `http-server` globally so that it may be run from the command line.\n\n## Usage:\n\n     http-server [path] [options]\n\n`[path]` defaults to `./public` if the folder exists, and `./` otherwise.\n\n# Installing as a node app\n\n     mkdir myapp\n     cd myapp/\n     jitsu install http-server\n\n*If you do not have `jitsu` installed you can install it via `npm install jitsu -g`*\n\n## Usage\n\n### Starting http-server locally\n\n     node bin/http-server\n\n*Now you can visit http://localhost:8080 to view your server*\n\n## Available Options:\n\n`-p` Port to use (defaults to 8080)\n\n`-a` Address to use (defaults to 0.0.0.0)\n\n`-d` Show directory listings (defaults to \'True\')\n\n`-i` Display autoIndex (defaults to \'True\')\n\n`-e` or `--ext` Default file extension if none supplied (defaults to \'html\')\n\n`-s` or `--silent` Suppress log messages from output\n\n`--cors` Enable CORS via the `Access-Control-Allow-Origin` header\n\n`-o` Open browser window after starting the server\n\n`-c` Set cache time (in seconds) for cache-control max-age header, e.g. -c10 for 10 seconds (defaults to \'3600\'). To disable caching, use -c-1.\n\n`-U` or `--utc` Use UTC time format in log messages.\n\n`-P` or `--proxy` Proxies all requests which can\'t be resolved locally to the given url. e.g.: -P http://someurl.com\n\n`-S` or `--ssl` Enable https.\n\n`-C` or `--cert` Path to ssl cert file (default: cert.pem).\n\n`-K` or `--key` Path to ssl key file (default: key.pem).\n\n`-r` or `--robots` Provide a /robots.txt (whose content defaults to \'User-agent: *\\nDisallow: /\')\n\n`-h` or `--help` Print this list and exit.\n',
+135 silly resolved     readmeFilename: 'README.md',
+135 silly resolved     _id: 'http-server@0.9.0',
+135 silly resolved     dist: { shasum: '55aaab912ab09132f78c0a03f7b2932052c4371f' },
+135 silly resolved     _from: 'http-server@',
+135 silly resolved     _resolved: 'https://registry.npmjs.org/http-server/-/http-server-0.9.0.tgz' } ]
+136 info install http-server@0.9.0 into /usr/local/lib
+137 info installOne http-server@0.9.0
+138 verbose from cache /Users/piahenrietta/.npm/http-server/0.9.0/package/package.json
+139 info /usr/local/lib/node_modules/http-server unbuild
+140 verbose read json /usr/local/lib/node_modules/http-server/package.json
+141 verbose tar unpack /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+142 silly lockFile ae30c9ae-cal-lib-node-modules-http-server /usr/local/lib/node_modules/http-server
+143 verbose lock /usr/local/lib/node_modules/http-server /Users/piahenrietta/.npm/ae30c9ae-cal-lib-node-modules-http-server.lock
+144 silly lockFile 5719893b-pm-http-server-0-9-0-package-tgz /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz
+145 verbose lock /Users/piahenrietta/.npm/http-server/0.9.0/package.tgz /Users/piahenrietta/.npm/5719893b-pm-http-server-0-9-0-package-tgz.lock
+146 silly gunzTarPerm modes [ '755', '644' ]
+147 error Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server'
+147 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server']
+147 error   errno: 3,
+147 error   code: 'EACCES',
+147 error   path: '/usr/local/lib/node_modules/http-server',
+147 error   fstream_type: 'Directory',
+147 error   fstream_path: '/usr/local/lib/node_modules/http-server',
+147 error   fstream_class: 'DirWriter',
+147 error   fstream_stack:
+147 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+147 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+147 error      'Object.oncomplete (fs.js:93:15)' ] }
+148 error Please try running this command again as root/Administrator.
+149 error System Darwin 13.0.0
+150 error command "node" "/usr/local/bin/npm" "install" "-g" "http-server"
+151 error cwd /Users/piahenrietta/Desktop/EMMA/webgl-experiments-gh-pages/01-rotating-mesh
+152 error node -v v0.10.0
+153 error npm -v 1.2.14
+154 error path /usr/local/lib/node_modules/http-server
+155 error fstream_path /usr/local/lib/node_modules/http-server
+156 error fstream_type Directory
+157 error fstream_class DirWriter
+158 error code EACCES
+159 error errno 3
+160 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/http-server'
+161 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+161 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+161 error fstream_stack Object.oncomplete (fs.js:93:15)
+162 verbose exit [ 3, true ]
