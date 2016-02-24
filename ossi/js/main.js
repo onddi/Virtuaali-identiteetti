@@ -3,6 +3,13 @@ var scene, camera, renderer, controls;
 var WIDTH  = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
+if (document.location.hostname == "localhost") {
+    var rotate = false;
+    var angleLimit =  0;
+} else {
+    rotate = true;
+}
+
 var SPEED = 0.01;
 
 function init() {
@@ -13,8 +20,6 @@ function init() {
     initLights();
     initRenderer();
     initControls();
-
-    //
 
     window.addEventListener( 'resize', onWindowResize, false );     
 
@@ -46,7 +51,11 @@ function initControls() {
 
 
 function initRenderer() {
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: 1});
+    if (document.location.hostname == "localhost") {
+        renderer = new THREE.WebGLRenderer({preserveDrawingBuffer: true, antialias: true, alpha: 1});
+    } else {
+        renderer = new THREE.WebGLRenderer({antialias: true, alpha: 1});
+    }
     renderer.setSize(WIDTH, HEIGHT);
 }
 
@@ -98,12 +107,35 @@ function rotateMesh() {
     //mesh.rotation.x -= SPEED * 2;
     mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
+
+    if (document.location.hostname == "localhost") { // if on localhost
+        if (mesh.rotation.y > angleLimit) { //record frames of the first rotation
+            var image = renderer.domElement.toDataURL('image/png');
+            var req = new XMLHttpRequest();
+            req.open("POST", "http://localhost:8080", true);
+            var data = {
+                cmd: 'screenshot',
+                dataURL: image,
+            };
+            req.setRequestHeader("Content-type", "application/json");
+            req.send(JSON.stringify(data));
+        }
+    }
 }
 
 function render() {
     requestAnimationFrame(render);
-    rotateMesh();
+    if (rotate) {
+        rotateMesh();
+    };
     renderer.render(scene, camera);
+}
+
+document.body.onkeydown = function(e) {
+    if (e.keyCode == 32) { 
+      rotate = true;
+      angleLimit = mesh.rotation.y - 6.283;
+    };
 }
 
 init();
