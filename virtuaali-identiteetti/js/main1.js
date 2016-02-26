@@ -5,6 +5,14 @@ var HEIGHT = window.innerHeight;
 
 var SPEED = 0.01;
 
+
+var group = null;
+var mesh = null;
+var mx = 0;
+var rotate = true;
+var raycaster;
+var group_array;
+
 function init() {
     scene = new THREE.Scene();
 
@@ -16,12 +24,19 @@ function init() {
 
     //
 
+    group_array = new Array();
+
     document.body.appendChild(renderer.domElement);
+    raycaster = new THREE.Raycaster();
+    mouse = new THREE.Vector2();
+    document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+    document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+
 } 
 
 function initCamera() {
     camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 1000);
-    camera.position.set(0, 0, -15);
+    camera.position.set(0, 0, 17);
     camera.lookAt(scene.position);
 }
 
@@ -73,10 +88,6 @@ for(var i = 0; i < rows; i++)
 
 console.log(meshPos);*/
 
-var group = null;
-var mesh = null;
-var mx = 0;
-var rotate = true;
 
 /***** Centering content guide:
        Center the orbit control camera 
@@ -130,9 +141,11 @@ function initMesh() {
                 mesh.translation = geometry.center(geometry);
                 mesh.position.x = meshPos[index][0];
                 mesh.position.y = meshPos[index][1];
-                mesh.rotationSpeed = (Math.random() * (0.0120 - 0.0010) + 0.0010).toFixed(4)
+                mesh.rotationSpeed = (Math.random() * (0.0120 - 0.0010) + 0.0010).toFixed(4);
+                mesh.name = models[index];
                 //scene.add( mesh );
                 group.add(mesh);
+                group_array.push(mesh);
 
                 // wireframe
                 /*var helper = new THREE.EdgesHelper( mesh, 0xffffff );
@@ -159,15 +172,19 @@ function rotateMesh() {
     //mesh.rotation.y -= SPEED;
     //mesh.rotation.z -= SPEED * 3;
     //group.rotation.y -= SPEED;
-    for(var index in group.children)
+    for(var index in group.children){
         group.children[index].rotation.y -= group.children[index].rotationSpeed;
         //group.children[index].rotation.y -=SPEED;
+    }
 }
 
 function render() {
     requestAnimationFrame(render);
+    
     if(rotate)
         rotateMesh();
+    
+    TWEEN.update();
     renderer.render(scene, camera);
 }
 
@@ -205,6 +222,69 @@ hammertime.get('pinch').set({ enable: true });
 hammertime.on('pinch    ', function(ev) {
     console.log(ev);
 });
+
+function onDocumentTouchStart( event ) {
+    
+    event.preventDefault();
+    
+    event.clientX = event.touches[0].clientX;
+    event.clientY = event.touches[0].clientY;
+    onDocumentMouseDown( event );
+
+}   
+
+
+function onDocumentMouseDown( event ) {
+
+    event.preventDefault();
+
+    mouse.x = ( event.clientX / renderer.domElement.clientWidth ) * 2 - 1;
+    mouse.y = - ( event.clientY / renderer.domElement.clientHeight ) * 2 + 1;
+
+    raycaster.setFromCamera( mouse, camera );
+
+    var intersects = raycaster.intersectObjects( group_array );
+
+    if ( intersects.length > 0 ) {
+
+        var intersection = intersects[ 0 ].object;
+
+        //intersection.material.color.setHex( Math.random() * 0xffffff );
+        //intersection.material.color.setHex( 0xBCC0C2 );
+        /*new TWEEN.Tween(intersection.material.color.getHSL())
+        .to({h: 0.7, s: 0.4, l: 0.92}, 300)
+        .easing(TWEEN.Easing.Quartic.InOut)
+        .onUpdate(
+            function()
+            {   console.log(this.h)
+                intersection.material.color.setHSL(this.h, this.s, this.l);
+            }
+        )
+        .start();
+        console.log(intersects[ 0 ].object)*/
+        //lookAtAndOrient(camera, intersection.position, intersection)
+        //var particle = new THREE.Sprite( particleMaterial );
+        //particle.position.copy( intersects[ 0 ].point );
+        //particle.scale.x = particle.scale.y = 16;
+        //scene.add( particle );
+        // backup original rotation
+        
+        var url = "http://localhost:8000/virtuaali-identiteetti/closeups/index.html#"+intersection.name;
+        window.location.href = url;
+        
+
+    }
+
+    /*
+    // Parse all the faces
+    for ( var i in intersects ) {
+
+        intersects[ i ].face.material[ 0 ].color.setHex( Math.random() * 0xffffff | 0x80000000 );
+
+    }
+    */
+}
+
 
 init();
 render();
