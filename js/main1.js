@@ -269,7 +269,7 @@ function onDocumentMouseDown( event ) {
         //scene.add( particle );
         // backup original rotation
         
-        var url = "http://localhost:8000/virtuaali-identiteetti/closeups/index.html#"+intersection.name;
+        var url = window.location+"closeups/#"+intersection.name;
         window.location.href = url;
         
 
