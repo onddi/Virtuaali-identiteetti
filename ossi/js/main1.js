@@ -86,10 +86,10 @@ var rotate = true;
 
 
 var meshPos = [ 
-                      [0,0], [5,0], [10,0], [15,0],[20,0],[25,0],
-                      [0,5], [5,5], [10,5], [15,5],[20,5],[25,5],
-                      [0,10], [5,10], [10,10], [15,10],[20,10],[25,10],
-                      [0,15], [5,15], [10,15], [15,15], [20,15],[25,15],
+                      [0,0], [5,0], [10,0], [15,0],[20,0],[25,0],[30,0],
+                      [0,5], [5,5], [10,5], [15,5],[20,5],[25,5],[30,5],
+                      [0,10], [5,10], [10,10], [15,10],[20,10],[25,10],[30,10],
+                      [0,15], [5,15], [10,15], [15,15], [20,15],[25,15],[30,15]
                       
               ];
 
@@ -97,7 +97,8 @@ var models = ['cong','dami','derita','gundogdu','haikala','heiskanen',
               'herraX','kokkola', 'kokkonen', 'koskinen', 'makela',
               'metteri','pahkala','pakkasvirta','palovaara',
               'pasanen','puska','salin','sorvettula','vuorensalmi',
-              'kekalainen','lofgren','nguyen','heino'];
+              'kekalainen','lofgren','nguyen','heino','liukas','nazalius',
+              'rautalahti','karppinen'];
 
 
 function initMesh() {
@@ -144,7 +145,7 @@ function initMesh() {
     }
     //Center the group (value depends on the grid size)
     group.translateY(-7.5);
-    group.translateX(-10);
+    group.translateX(-15);
     console.log(group);
     scene.add(group);
 }
