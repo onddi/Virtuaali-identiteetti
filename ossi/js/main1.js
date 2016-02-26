@@ -114,7 +114,7 @@ function initMesh() {
 
                 /// material
                 var material = new THREE.MeshPhongMaterial( {
-                    color: 0x00000, 
+                    color: 0xffffff, 
                     shading: THREE.FlatShading,
                     polygonOffset: true,
                     polygonOffsetFactor: 1, // positive value pushes polygon further away
@@ -125,7 +125,7 @@ function initMesh() {
                 
                 // mesh
                 mesh = new THREE.Mesh( geometry, material );
-                mesh.scale.x = mesh.scale.y = mesh.scale.z = 1.3;
+                mesh.scale.x = mesh.scale.y = mesh.scale.z = 1.32;
                 mesh.translation = geometry.center(geometry);
                 mesh.position.x = meshPos[index][0];
                 mesh.position.y = meshPos[index][1];
