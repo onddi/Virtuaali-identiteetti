@@ -32,7 +32,7 @@ function onWindowResize() {
 
 function initCamera() {
     camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
-    camera.position.set(0, 0, 5);
+    camera.position.set(0, 0, 4);
     camera.lookAt(scene.position);
 }
 

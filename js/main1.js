@@ -34,14 +34,15 @@ function init() {
     //document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     console.log(renderer.domElement);
     hammertime = new Hammer(document.body);
-    var startScale = 1;
+    
+    //var startScale = 1;
 
-    hammertime.on("transformstart", function(e) {
+    /*hammertime.on("transformstart", function(e) {
         startScale = e.scale;
         console.log("START SCALE" + startScale);
     }).on("transform", function(e) {
         console.log(e.gesture.scale);
-    })
+    })*/
 
 } 
 
