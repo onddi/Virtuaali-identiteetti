@@ -57,7 +57,7 @@ function initControls() {
     //controls.addEventListener( 'change', render ); // add this only if there is no animation loop (requestAnimationFrame)
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-    controls.enableZoom = false;
+    controls.enableZoom = true;
     controls.center =  new THREE.Vector3(
         200,
         200,
@@ -218,7 +218,7 @@ window.onkeydown = function (e) {
     }
 };
 
-document.body.addEventListener( 'mousewheel', mousewheel, false );
+/*document.body.addEventListener( 'mousewheel', mousewheel, false );
 var focalLength = 25.734; // equivalent to FOV=50
 function mousewheel( e ) { 
 
@@ -227,7 +227,7 @@ function mousewheel( e ) {
     focalLength += e.wheelDelta/500;
     if(focalLength < 0) focalLength = 0.1;
     camera.setLens(focalLength);
-};
+};*/
 
 
 function onDocumentTouchStart( event ) {
