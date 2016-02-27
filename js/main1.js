@@ -32,7 +32,8 @@ function init() {
     mouse = new THREE.Vector2();
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     //document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-    hammertime = new Hammer(renderer.domElement);
+    console.log(renderer.domElement);
+    hammertime = new Hammer(document.body);
     var startScale = 1;
 
     hammertime.on("transformstart", function(e) {
