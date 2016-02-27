@@ -33,6 +33,14 @@ function init() {
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     hammertime = new Hammer(renderer.domElement);
+    var startScale = 1;
+
+    hammertime.on("transformstart", function(e) {
+        startScale = e.scale;
+        console.log("START SCALE" + startScale);
+    }).on("transform", function(e) {
+        console.log(e.gesture.scale);
+    })
 
 } 
 
@@ -219,14 +227,6 @@ function mousewheel( e ) {
     camera.setLens(focalLength);
 };
 
-var startScale = 1;
-
-hammertime.on("transformstart", function(e) {
-    startScale = e.scale;
-    console.log("START SCALE" + startScale);
-}).on("transform", function(e) {
-    console.log(e.gesture.scale);
-})
 
 function onDocumentTouchStart( event ) {
     
