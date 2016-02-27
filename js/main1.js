@@ -221,6 +221,7 @@ var hammertime = new Hammer(document.body);
 hammertime.get('pinch').set({ enable: true });
 hammertime.on('pinch    ', function(ev) {
     console.log(ev);
+    console.log("JFUAHAFSUH")
 });
 
 function onDocumentTouchStart( event ) {
