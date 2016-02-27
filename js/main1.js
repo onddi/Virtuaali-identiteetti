@@ -33,7 +33,7 @@ function init() {
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     //document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     console.log(renderer.domElement);
-    hammertime = new Hammer(document.body);
+    //hammertime = new Hammer(document.body);
     
     //var startScale = 1;
 
