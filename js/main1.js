@@ -217,24 +217,18 @@ function mousewheel( e ) {
     camera.setLens(focalLength);
 };
 
+var startScale = 1;
+
 var hammertime = new Hammer(document.body);
-hammertime.get('pinch').set({ enable: true });
-hammertime.on('pinch    ', function(ev) {
-    console.log(ev);
-    gestureChange(ev);
-});
+.on("transformstart", function(e) {
+    startScale = e.scale;
+    console.log("START SCALE" + startScale);
+}).on("transform", function(e) {
+    console.log(e.gesture.scale);
+})
 
 function gestureChange( e ) {
-    e.preventDefault();
-
-    scale = e.scale;
-    console.log(scale);
-}
-
-function gestureEnd( e ) {
-    e.preventDefault();
-    
-}
+    e.pre
 
 function onDocumentTouchStart( event ) {
     
