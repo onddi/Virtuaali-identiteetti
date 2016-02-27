@@ -31,7 +31,7 @@ function init() {
     raycaster = new THREE.Raycaster();
     mouse = new THREE.Vector2();
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
-    document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+    //document.addEventListener( 'touchstart', onDocumentTouchStart, false );
     hammertime = new Hammer(renderer.domElement);
     var startScale = 1;
 
