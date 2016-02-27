@@ -12,6 +12,7 @@ var mx = 0;
 var rotate = true;
 var raycaster;
 var group_array;
+var hammertime;
 
 function init() {
     scene = new THREE.Scene();
@@ -31,6 +32,7 @@ function init() {
     mouse = new THREE.Vector2();
     document.addEventListener( 'mousedown', onDocumentMouseDown, false );
     document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+    hammertime = new Hammer(renderer.domElement);
 
 } 
 
@@ -219,7 +221,6 @@ function mousewheel( e ) {
 
 var startScale = 1;
 
-var hammertime = new Hammer(document.body);
 hammertime.on("transformstart", function(e) {
     startScale = e.scale;
     console.log("START SCALE" + startScale);
