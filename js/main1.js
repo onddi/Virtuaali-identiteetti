@@ -36,7 +36,7 @@ function init() {
 
 function initCamera() {
     camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 1000);
-    camera.position.set(0, 0, 17);
+    camera.position.set(0, 0, 15.5);
     camera.lookAt(scene.position);
 }
 
@@ -157,7 +157,7 @@ function initMesh() {
         })(i);
     }
     //Center the group (value depends on the grid size)
-    group.translateY(-7.5);
+    group.translateY(-7);
     group.translateX(-15);
     console.log(group);
     scene.add(group);
@@ -221,8 +221,20 @@ var hammertime = new Hammer(document.body);
 hammertime.get('pinch').set({ enable: true });
 hammertime.on('pinch    ', function(ev) {
     console.log(ev);
-    console.log("JFUAHAFSUH")
+    gestureChange(ev);
 });
+
+function gestureChange( e ) {
+    e.preventDefault();
+
+    scale = e.scale;
+    console.log(scale);
+}
+
+function gestureEnd( e ) {
+    e.preventDefault();
+    
+}
 
 function onDocumentTouchStart( event ) {
     

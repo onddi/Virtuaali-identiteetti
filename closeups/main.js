@@ -69,7 +69,7 @@ function initMesh() {
 
         /// material
         var material = new THREE.MeshPhongMaterial( {
-            color: 0x000000, 
+            color: 0xffffff, 
             shading: THREE.FlatShading,
             polygonOffset: true,
             polygonOffsetFactor: 1, // positive value pushes polygon further away
