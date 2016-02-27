@@ -380,8 +380,6 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	function dollyIn( dollyScale ) {
 
-		console.log(dollyScale);
-
 		if ( scope.object instanceof THREE.PerspectiveCamera ) {
 
 			scale /= dollyScale;
@@ -643,6 +641,9 @@ THREE.OrbitControls = function ( object, domElement ) {
 		dollyEnd.set( 0, distance );
 
 		dollyDelta.subVectors( dollyEnd, dollyStart );
+
+
+		console.log(distance);
 
 		if ( dollyDelta.y > 0 ) {
 
