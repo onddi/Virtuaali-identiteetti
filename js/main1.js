@@ -220,15 +220,12 @@ function mousewheel( e ) {
 var startScale = 1;
 
 var hammertime = new Hammer(document.body);
-.on("transformstart", function(e) {
+hammertime.on("transformstart", function(e) {
     startScale = e.scale;
     console.log("START SCALE" + startScale);
 }).on("transform", function(e) {
     console.log(e.gesture.scale);
 })
-
-function gestureChange( e ) {
-    e.pre
 
 function onDocumentTouchStart( event ) {
     
