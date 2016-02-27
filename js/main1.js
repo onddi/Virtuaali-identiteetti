@@ -238,7 +238,7 @@ function onDocumentTouchStart( event ) {
     event.clientY = event.touches[0].clientY;
     onDocumentMouseDown( event );
 
-}   
+}
 
 
 function onDocumentMouseDown( event ) {
