@@ -1,4 +1,4 @@
-Projected video artpiece for a MeHackit workshop weekend held at EMMA - Espoo Museum of Modern Art. All the attendees were scanned with a Kinect. The resulting 3D models were imported to Blender, edited and exported to be used in three.js. Also designed to be used with mobile.
+Projected video artpiece for a MeHackit weekend workshop exhibition held at EMMA - Espoo Museum of Modern Art. All the attendees were scanned with a Kinect. The resulting 3D models were imported to Blender, edited and exported to be used in three.js. The piece also had a QR code next to it to enable mobile interaction.
 
 # Based on:
 
